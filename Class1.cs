@@ -30,7 +30,7 @@ namespace OneForAll
         public void Start()
         {
             creature = GetComponent<Creature>();
-            instance = Catalog.GetData<EffectData>("OneForAll").Spawn(creature.ragdoll.rootPart.transform, true);
+            instance = Catalog.GetData<EffectData>("OneForAll").Spawn(creature.ragdoll.rootPart.transform, null, true);
             instance.SetRenderer(creature.GetRendererForVFX(), false);
             instance.SetIntensity(1f);
             instance.Play();
